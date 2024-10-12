@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
+import About from "./About";
 
 export default function () {
   const [text] = useTypewriter({
@@ -8,8 +9,8 @@ export default function () {
   });
 
   return (
-    <div className="max-w-[1440px] mx-auto  bg-neutral-950 py-10">
-      <div className="grid grid-cols-12 w-11/12 mx-auto items-center space-y-8 text-white ">
+    <div className="max-w-[1440px] mx-auto  bg-neutral-950 md:py-2 lg:py-0 py-10">
+      <div className=" w-11/12 mx-auto flex lg:flex-row flex-col-reverse items-center space-y-8 text-white ">
         <div className="grid lg:col-span-6 col-span-12">
           <div className=" lg:space-y-5 flex-col ">
             <p className=" ">Welcome to my World</p>
@@ -33,6 +34,7 @@ export default function () {
           <img src="/about-9.jpg" alt="" />
         </div>
       </div>
+      <About />
     </div>
   );
 }
