@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import About from "./About";
+import Card from "../Card";
 
 export default function () {
   const [text] = useTypewriter({
@@ -35,6 +36,7 @@ export default function () {
         </div>
       </div>
       <About />
+      <Card name="rahu" />
     </div>
   );
 }
