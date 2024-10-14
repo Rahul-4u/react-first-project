@@ -5,8 +5,9 @@ import CategoryBtn from "./CategoryBtn";
 import Api from "./Api";
 
 export default function About() {
-  const [show, setShow] = useState("");
+  const [show, setShow] = useState(""); // State for selected category
 
+  // Create cards from data
   const dats = Data.map((data) => {
     return (
       <Card key={data.key} title={data.title} id={data.id} dec={data.dec} />
@@ -37,7 +38,6 @@ export default function About() {
       </div>
       <div className="grid grid-cols-3 gap-6">{dats}</div>
 
-      <h1>Pet Adoption Platform</h1>
       <CategoryBtn onSelectCategory={setShow} />
       <Api selectedCategory={show} />
     </div>
